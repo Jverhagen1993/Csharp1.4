@@ -1,0 +1,30 @@
+﻿<Window x:Class="Drankregistratie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Drankregistratie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="dgMain">
+        <DataGrid x:Name="dgDranken" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="383" MouseDoubleClick="dgDranken_MouseDoubleClick" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" ClipboardContentBinding="{x:Null}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding NAAM}" ClipboardContentBinding="{x:Null}" Header="Naam"/>
+                <DataGridTextColumn Binding="{Binding SOORT}" ClipboardContentBinding="{x:Null}" Header="Soort"/>
+                <DataGridTextColumn Binding="{Binding PRIJS}" ClipboardContentBinding="{x:Null}" Header="Prijs"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel HorizontalAlignment="Left" Height="399" Margin="398,10,0,0" VerticalAlignment="Top" Width="100">
+            <TextBox x:Name="txtID" Height="23" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtNaam" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="0"/>
+            <TextBox x:Name="txtSoort" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="0,30,0,0"/>
+            <TextBox x:Name="txtPrijs" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="0,30,0,0"/>
+            <Button x:Name="btnAdd" Content="Toevoegen" Margin="0,30,0,0" Height="37" Click="btnAdd_Click"/>
+            <Button Content="Update" Height="31" Click="Button_Click"/>
+            <Button x:Name="btnDelete" Content="Verwijderen" Height="29" HorizontalAlignment="Left" Width="100" Click="btnDelete_Click"/>
+            <Button x:Name="btnSearch" Content="Zoeken" Margin="0,20,0,0" Click="btnSearch_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
